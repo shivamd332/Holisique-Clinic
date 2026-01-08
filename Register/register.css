@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #ffffff;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-circle {
+    width: 50%;
+    background: #440001;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.form-container {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container h1 {
+    color: #9C0001;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 14px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #9C0001;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: #fff;
+    background: #9C0001;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-circle {
+        width: 100%;
+        height: 250px;
+        border-radius: 0 0 100% 100%;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .left-circle {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .form-container h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+}
