@@ -1,0 +1,239 @@
+@media (max-width: 1024px) {
+
+  /* GLOBAL  */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 44px;
+  }
+
+  .hero-sub {
+    font-size: 28px;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    margin-top: 25px;
+  }
+
+  /* ABOUT  */
+  .about-box {
+    flex-direction: column;
+  }
+
+  .about-image-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about-image-box img {
+    width: 100%;
+  }
+
+  .about-content-box {
+    width: 100%;
+    margin-left: 0;
+    padding: 30px;
+  }
+
+  /* TREATMENTS */
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  /* WHY CHOOSE */
+  .why-container {
+    flex-direction: column;
+  }
+
+  .why-content,
+  .why-image {
+    width: 100%;
+  }
+
+  /* PROCESS */
+  .process-container {
+    flex-direction: column;
+  }
+
+  .process-left,
+  .process-right {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  /* BLOG (WIDTH FIX) */
+  .blog-content {
+    flex-direction: column;
+  }
+
+  .blog-main-card {
+    width: 100%;
+  }
+
+  .blog-main-card img {
+    width: 100%;
+  }
+
+  .blog-side-cards {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer-contacts,
+  .footer-middle,
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-sub {
+    font-size: 22px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  /* ABOUT */
+  .about-wrapper {
+    padding: 40px 20px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  /* TREATMENTS */
+  .treatments-section {
+    padding: 20px;
+  }
+
+  .treatments-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .treatment-card {
+    height: auto;
+  }
+
+  /* WHY CHOOSE */
+  .why-title {
+    font-size: 26px;
+  }
+
+  .why-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  /* PROCESS */
+  .process-section {
+    padding: 40px 20px;
+  }
+
+  .process-title {
+    font-size: 26px;
+  }
+
+  .process-step {
+    gap: 15px;
+  }
+
+  /* TESTIMONIAL */
+  .testimonial-wrapper {
+    flex-direction: column;
+  }
+
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* BLOG */
+  .blog-section {
+    padding: 40px 20px;
+  }
+
+  .blog-side-card {
+    flex-direction: column;
+  }
+
+  .blog-side-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* INSTAGRAM */
+  .instagram-gallery {
+    flex-direction: column;
+  }
+
+  /* OFFER */
+  .offer-form {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .offer-form input {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer-map img {
+    width: 100%;
+  }
+}

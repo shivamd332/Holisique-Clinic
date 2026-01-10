@@ -5,7 +5,13 @@
   font-family: Arial, sans-serif;
 }
 
-/* ================= NAVBAR ================= */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ---NAVBAR--- */
 .navbar {
   background-color: #440001;
   display: flex;
@@ -69,7 +75,7 @@
   transition: 0.2s ease;
 }
 
-/* ================= HERO ================= */
+/* ---HERO--- */
 .hero {
   background-color: #9C0001;
   display: flex;
@@ -137,7 +143,7 @@
   max-width: 380px;
 }
 
-/* ================= ABOUT ================= */
+/* ---ABOUT--- */
 .about-wrapper {
   padding: 80px 60px;
 }
@@ -216,7 +222,7 @@
   font-size: 16px;
 }
 
-/* ================= TREATMENTS SECTION ================= */
+/* ---TREATMENTS SECTION--- */
 .treatments-section {
   padding: 0 60px 60px;
   text-align: center;
@@ -349,7 +355,7 @@
   justify-content: center;
 }
 
-/* ================= WHY CHOOSE SECTION ================= */
+/* ---WHY CHOOSE SECTION--- */
 .why-choose-section {
   padding: 30px 60px;
 }
@@ -1003,6 +1009,11 @@
   font-size: 18px;
 }
 
+.icon-circle img {
+  height: 22px;
+  width: 22px;
+}
+
 .footer-divider1 {
   border: none;
   border-top: 1px solid #ffffff;
@@ -1072,50 +1083,71 @@
 }
 
 
-@media (max-width: 1024px) {
 
-  /* GLOBAL  */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+@media (max-width: 767px) {
+  
+      /* ===== NAVBAR FIX ===== */
+      .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+  
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+  
+      .nav-links li a {
+        font-size: 15px;
+        padding: 6px 0;
+      }
+  
+      .register-btn {
+        align-self: flex-start;
+        font-size: 13px;
+      }
 
-  /* NAVBAR */
-  .navbar {
-    padding: 15px 30px;
-  }
-
-  /* HERO */
+  /* ===== HERO ===== */
   .hero {
     flex-direction: column;
-    padding: 40px 30px;
+    padding: 40px 20px;
     text-align: center;
   }
 
-  .hero-content {
-    max-width: 100%;
-  }
-
   .hero-title {
-    font-size: 44px;
+    font-size: 38px;
   }
 
   .hero-sub {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
   }
 
   .hero-image img {
-    max-width: 300px;
-    margin-top: 25px;
+    max-width: 260px;
+    margin-top: 30px;
   }
 
-  /* ABOUT  */
+  /* ===== ABOUT ===== */
+  .about-wrapper {
+    padding: 50px 20px;
+  }
+
   .about-box {
     flex-direction: column;
   }
 
-  .about-image-box {
+  .about-image-box,
+  .about-content-box {
     width: 100%;
+    margin-left: 0;
     padding: 20px;
   }
 
@@ -1123,125 +1155,73 @@
     width: 100%;
   }
 
-  .about-content-box {
-    width: 100%;
-    margin-left: 0;
-    padding: 30px;
-  }
-
-  /* TREATMENTS */
-  .treatments-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  /* WHY CHOOSE */
-  .why-container {
-    flex-direction: column;
-  }
-
-  .why-content,
-  .why-image {
-    width: 100%;
-  }
-
-  /* PROCESS */
-  .process-container {
-    flex-direction: column;
-  }
-
-  .process-left,
-  .process-right {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  /* BLOG (WIDTH FIX) */
-  .blog-content {
-    flex-direction: column;
-  }
-
-  .blog-main-card {
-    width: 100%;
-  }
-
-  .blog-main-card img {
-    width: 100%;
-  }
-
-  .blog-side-cards {
-    width: 100%;
-  }
-
-  /* FOOTER */
-  .footer-contacts,
-  .footer-middle,
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 25px;
-  }
-}
-
-
-@media (max-width: 768px) {
-
-  /* NAVBAR */
-  .navbar {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  /* HERO */
-  .hero {
-    padding: 30px 20px;
-  }
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-sub {
-    font-size: 22px;
-  }
-
-  .hero-desc {
-    font-size: 14px;
-  }
-
-  /* ABOUT */
-  .about-wrapper {
-    padding: 40px 20px;
-  }
-
-  .about-title {
-    font-size: 24px;
-  }
-
-  /* TREATMENTS */
+  /* ===== TREATMENTS ===== */
   .treatments-section {
-    padding: 20px;
+    padding: 40px 20px;
   }
 
   .treatments-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 30px;
   }
 
   .treatment-card {
     height: auto;
   }
 
-  /* WHY CHOOSE */
-  .why-title {
-    font-size: 26px;
+
+
+        /* ===== TREATMENTS MOBILE FIX ===== */
+        .treatments-section {
+          padding: 40px 20px;
+        }
+    
+        .treatments-grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+    
+        .treatment-card {
+          height: auto;
+        }
+    
+        .image-card img {
+          height: 220px;
+        }
+    
+        .card-overlay {
+          position: static;
+          transform: none;
+          padding: 12px 0;
+          background: #9C0001;
+        }
+    
+        .card-overlay h3 {
+          font-size: 18px;
+        }
+    
+        .center-card {
+          padding: 20px;
+        }
+    
+        .center-card h3 {
+          font-size: 18px;
+        }
+    
+        .center-card p {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+  /* ===== WHY CHOOSE ===== */
+  .why-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .why-content,
+  .why-image {
+    width: 100%;
   }
 
   .why-stats {
@@ -1253,33 +1233,43 @@
     display: none;
   }
 
-  /* PROCESS */
-  .process-section {
-    padding: 40px 20px;
+  /* ===== PROCESS ===== */
+  .process-container {
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .process-title {
-    font-size: 26px;
+  .process-left,
+  .process-right {
+    width: 100%;
+    padding-left: 0;
   }
 
-  .process-step {
-    gap: 15px;
-  }
-
-  /* TESTIMONIAL */
+  /* ===== TESTIMONIAL ===== */
   .testimonial-wrapper {
     flex-direction: column;
+    gap: 30px;
   }
 
   .testimonial-card {
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    align-items: center;
   }
 
-  /* BLOG */
-  .blog-section {
-    padding: 40px 20px;
+  /* ===== BLOG ===== */
+  .blog-content {
+    flex-direction: column;
+  }
+
+  .blog-main-card,
+  .blog-side-cards {
+    width: 100%;
+  }
+
+  .blog-main-card img {
+    width: 100%;
+    height: auto;
   }
 
   .blog-side-card {
@@ -1291,12 +1281,21 @@
     height: auto;
   }
 
-  /* INSTAGRAM */
+  .big-blog-arrow,
+  .blog-arrow {
+    padding-left: 0;
+  }
+
+  /* ===== INSTAGRAM ===== */
   .instagram-gallery {
     flex-direction: column;
   }
 
-  /* OFFER */
+  /* ===== OFFER ===== */
+  .offer-section {
+    padding: 40px 20px;
+  }
+
   .offer-form {
     flex-direction: column;
     gap: 20px;
@@ -1306,8 +1305,62 @@
     width: 100%;
   }
 
-  /* FOOTER */
-  .footer-map img {
+  /* ===== FOOTER ===== */
+  .footer-contacts {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hero {
+    padding: 50px 30px;
+  }
+
+  .about-wrapper,
+  .treatments-section,
+  .process-section,
+  .offer-section {
+    padding: 60px 30px;
+  }
+
+  .treatments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-container {
+    gap: 30px;
+  }
+
+  .process-right {
+    padding-left: 40px;
+  }
+
+  .blog-main-card img {
+    width: 100%;
+  }
+
+  .offer-form input {
     width: 100%;
   }
 }
