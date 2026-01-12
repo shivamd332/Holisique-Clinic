@@ -777,39 +777,64 @@
   justify-content: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
   body {
     overflow-x: hidden;
   }
 
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
   .navbar {
-    padding: 12px 16px;
+    padding: 15px 20px;
     flex-wrap: wrap;
-    gap: 10px;
   }
 
   .nav-links {
     flex-direction: column;
     width: 100%;
-    align-items: center;
-    gap: 14px;
+    margin-top: 15px;
+    gap: 12px;
+  }
+
+  .nav-links li a {
+    display: inline-block;
+    width: fit-content;
+    font-size: 16px;
+  }
+
+  .nav-links li a.active {
+    border-bottom: 2px solid #fff;
   }
 
   .hero-banner {
     height: 260px;
   }
-
+  
+  .hero-content {
+    padding: 0 16px;
+  }
+  
   .hero-content h1 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 10px;
   }
-
+  
   .hero-content p {
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
-  .about-hero {
-    padding: 30px 16px;
+  .about-decor {
+    display: none;
   }
 
   .about-title {
@@ -817,213 +842,115 @@
   }
 
   .about-desc {
-    font-size: 13px;
+    margin: 0 auto 25px;
   }
 
-  .what-we-do,
-  .what-we-offer,
-  .why-content,
-  .community-row,
-  .faq-section {
+  .what-we-do {
     flex-direction: column;
-    padding: 30px 16px;
-    gap: 24px;
+    gap: 30px;
+    padding: 40px 20px;
   }
 
   .what-content,
-  .what-image,
-  .offer-content,
-  .offer-image,
-  .why-features,
-  .why-image,
-  .community-content,
-  .community-image,
-  .faq-left,
-  .faq-image {
+  .what-image {
     width: 100%;
   }
 
   .what-title {
     white-space: normal;
-    font-size: 24px;
-  }
-
-  .offer-title,
-  .why-title,
-  .community-title,
-  .faq-title {
     font-size: 26px;
   }
 
-  .what-desc,
-  .offer-desc,
-  .community-content p,
-  .why-subtitle {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .footer-contacts,
-  .footer-middle,
-  .footer-bottom {
+  .what-we-offer {
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
+    gap: 30px;
+    padding: 40px 20px;
   }
 
-  .footer-middle {
-    padding: 0 16px;
-  }
-
-  .footer-map img {
+  .offer-image,
+  .offer-content {
     width: 100%;
-    height: auto;
   }
 
-  .footer-divider2 {
-    margin: 30px 16px 10px;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 992px) {
-  .navbar {
-    padding: 15px 30px;
+  .offer-title {
+    font-size: 26px;
   }
 
-  .hero-content h1 {
-    font-size: 32px;
+  .why-content {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .what-we-do,
-  .what-we-offer,
-  .why-content,
-  .community-row,
+  .why-features,
+  .why-image {
+    width: 100%;
+  }
+
+  .why-title {
+    font-size: 28px;
+  }
+
+  .community-row {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .community-row.reverse {
+    flex-direction: column;
+  }
+
+  .community-image,
+  .community-content {
+    width: 100%;
+  }
+
+  .community-content p {
+    margin-bottom: 30px;
+  }
+
   .faq-section {
-    padding: 40px 30px;
+    flex-direction: column;
     gap: 40px;
+    padding: 40px 20px;
   }
 
-  .what-content,
-  .offer-content,
-  .why-features,
-  .community-content,
-  .faq-left {
-    width: 55%;
-  }
-
-  .what-image,
-  .offer-image,
-  .why-image,
-  .community-image,
-  .faq-image {
-    width: 45%;
-  }
-
-  .what-title,
-  .offer-title,
-  .why-title,
-  .community-title,
-  .faq-title {
-    font-size: 30px;
-    white-space: normal;
-  }
-
-  .footer-middle {
-    flex-wrap: wrap;
-  }
-}
-
-
-
-
-
-/* @media (max-width: 576px) {
-  .navbar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero-banner {
-    height: 280px;
-  }
-
-  .hero-content h1 {
-    font-size: 26px;
-  }
-
-  .hero-content p {
-    font-size: 13px;
-  }
-
-  .what-we-do,
-  .what-we-offer,
-  .why-content,
-  .community-row,
-  .faq-section {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
-
-  .what-content,
-  .offer-content,
-  .why-features,
-  .community-content,
-  .faq-left {
-    width: 100%;
-  }
-
-  .what-image,
-  .offer-image,
-  .why-image,
-  .community-image,
+  .faq-left,
   .faq-image {
     width: 100%;
   }
 
-  .what-title,
-  .offer-title,
-  .why-title,
-  .community-title,
-  .faq-title,
-  .about-title {
+  .faq-title {
     font-size: 26px;
-    white-space: normal;
   }
 
-  .footer-contacts,
-  .footer-middle,
-  .footer-bottom {
+  .footer-contacts {
     flex-direction: column;
     gap: 20px;
-    text-align: center;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    gap: 30px;
   }
 
   .footer-map img {
     width: 100%;
-    height: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
 }
 
-@media (max-width: 991px) {
 
-  .navbar {
-    padding: 15px 30px;
-  }
+@media (max-width: 1024px) {
 
-  .hero-content h1 {
-    font-size: 34px;
+  section {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .what-we-do,
@@ -1031,36 +958,26 @@
   .why-content,
   .community-row,
   .faq-section {
-    gap: 40px;
-    padding: 40px 30px;
+    flex-direction: column;
   }
 
-  .what-title,
+  .what-content,
+  .what-image,
+  .offer-image,
+  .offer-content,
+  .why-features,
+  .why-image,
+  .community-image,
+  .community-content,
+  .faq-left,
+  .faq-image {
+    width: 100%;
+  }
+
+  .about-title,
   .offer-title,
   .why-title,
-  .community-title,
   .faq-title {
     font-size: 30px;
   }
-
-  .footer-middle {
-    flex-wrap: wrap;
-  }
 }
-
-@media (max-width: 1200px) {
-
-  .navbar {
-    padding: 15px 40px;
-  }
-
-  .what-we-do,
-  .what-we-offer,
-  .faq-section {
-    padding: 50px 40px;
-  }
-
-  .hero-content h1 {
-    font-size: 38px;
-  }
-} */

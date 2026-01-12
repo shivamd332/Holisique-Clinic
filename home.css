@@ -921,7 +921,7 @@ body {
   font-weight: bold;
 }
 
-/* ================= FOOTER ================= */
+/* ---FOOTER--- */
 .site-footer {
   background: #440001;
   color: #fff;
@@ -1082,40 +1082,51 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 
-@media (max-width: 767px) {
-  
-      /* ===== NAVBAR FIX ===== */
-      .navbar {
-        padding: 15px 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
-  
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-      }
-  
-      .nav-links li a {
-        font-size: 15px;
-        padding: 6px 0;
-      }
-  
-      .register-btn {
-        align-self: flex-start;
-        font-size: 13px;
-      }
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
 
-  /* ===== HERO ===== */
+  .nav-links {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 14px;
+   margin-top: 15px;
+  }
+
+  .nav-links li a {
+   display: block;
+   width: 100%;
+   padding: 10px 0;
+   font-size: 16px;
+  }
+  
+  .nav-links li a.active {
+    display: inline-block;
+    width: fit-content;
+    border-bottom: 2px solid #fff;
+  }
+
+  .register-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
   .hero {
     flex-direction: column;
-    padding: 40px 20px;
     text-align: center;
+    padding: 40px 20px 0;
   }
 
   .hero-title {
@@ -1127,17 +1138,12 @@ body {
   }
 
   .hero-desc {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .hero-image img {
-    max-width: 260px;
+    max-width: 100%;
     margin-top: 30px;
-  }
-
-  /* ===== ABOUT ===== */
-  .about-wrapper {
-    padding: 50px 20px;
   }
 
   .about-box {
@@ -1147,7 +1153,7 @@ body {
   .about-image-box,
   .about-content-box {
     width: 100%;
-    margin-left: 0;
+    margin: 0;
     padding: 20px;
   }
 
@@ -1155,68 +1161,27 @@ body {
     width: 100%;
   }
 
-  /* ===== TREATMENTS ===== */
-  .treatments-section {
-    padding: 40px 20px;
-  }
-
   .treatments-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
   .treatment-card {
     height: auto;
   }
 
+  .treatment-filters {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 
-
-        /* ===== TREATMENTS MOBILE FIX ===== */
-        .treatments-section {
-          padding: 40px 20px;
-        }
-    
-        .treatments-grid {
-          grid-template-columns: 1fr;
-          gap: 25px;
-        }
-    
-        .treatment-card {
-          height: auto;
-        }
-    
-        .image-card img {
-          height: 220px;
-        }
-    
-        .card-overlay {
-          position: static;
-          transform: none;
-          padding: 12px 0;
-          background: #9C0001;
-        }
-    
-        .card-overlay h3 {
-          font-size: 18px;
-        }
-    
-        .center-card {
-          padding: 20px;
-        }
-    
-        .center-card h3 {
-          font-size: 18px;
-        }
-    
-        .center-card p {
-          font-size: 14px;
-          line-height: 1.6;
-        }
-
-  /* ===== WHY CHOOSE ===== */
   .why-container {
     flex-direction: column;
-    gap: 30px;
   }
 
   .why-content,
@@ -1233,10 +1198,8 @@ body {
     display: none;
   }
 
-  /* ===== PROCESS ===== */
   .process-container {
     flex-direction: column;
-    gap: 40px;
   }
 
   .process-left,
@@ -1245,19 +1208,15 @@ body {
     padding-left: 0;
   }
 
-  /* ===== TESTIMONIAL ===== */
   .testimonial-wrapper {
     flex-direction: column;
     gap: 30px;
   }
 
-  .testimonial-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  .nav-arrow {
+    display: none;
   }
 
-  /* ===== BLOG ===== */
   .blog-content {
     flex-direction: column;
   }
@@ -1281,19 +1240,30 @@ body {
     height: auto;
   }
 
-  .big-blog-arrow,
-  .blog-arrow {
-    padding-left: 0;
-  }
-
-  /* ===== INSTAGRAM ===== */
-  .instagram-gallery {
+  .subscribe-box {
     flex-direction: column;
+    width: 100%;
+  }
+  
+  .subscribe-box input {
+    width: 100%;
+  }
+  
+  .subscribe-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .privacy-text {
+    width: 100%;
   }
 
-  /* ===== OFFER ===== */
-  .offer-section {
-    padding: 40px 20px;
+  .instagram-gallery {
+    flex-wrap: wrap;
+  }
+
+  .insta-img {
+    flex: 1 1 48%;
   }
 
   .offer-form {
@@ -1305,7 +1275,6 @@ body {
     width: 100%;
   }
 
-  /* ===== FOOTER ===== */
   .footer-contacts {
     flex-direction: column;
     gap: 20px;
@@ -1316,6 +1285,10 @@ body {
     gap: 30px;
   }
 
+  .footer-map img {
+    width: 100%;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 15px;
@@ -1323,44 +1296,38 @@ body {
   }
 }
 
-
-
-
-
 @media (max-width: 1024px) {
 
-  .navbar {
-    padding: 15px 30px;
-  }
-
-  .hero {
-    padding: 50px 30px;
-  }
-
-  .about-wrapper,
-  .treatments-section,
-  .process-section,
-  .offer-section {
-    padding: 60px 30px;
-  }
-
-  .treatments-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-container {
-    gap: 30px;
-  }
-
-  .process-right {
+  section {
     padding-left: 40px;
+    padding-right: 40px;
   }
 
-  .blog-main-card img {
+  .what-we-do,
+  .what-we-offer,
+  .why-content,
+  .community-row,
+  .faq-section {
+    flex-direction: column;
+  }
+
+  .what-content,
+  .what-image,
+  .offer-image,
+  .offer-content,
+  .why-features,
+  .why-image,
+  .community-image,
+  .community-content,
+  .faq-left,
+  .faq-image {
     width: 100%;
   }
 
-  .offer-form input {
-    width: 100%;
+  .about-title,
+  .offer-title,
+  .why-title,
+  .faq-title {
+    font-size: 30px;
   }
 }
