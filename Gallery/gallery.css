@@ -111,7 +111,6 @@ body {
 .gallery-content p {
   font-size: 16px;
   line-height: 1.8;
-  opacity: 0.95;
 }
 
 /* ---LATEST IMAGES--- */
@@ -126,20 +125,29 @@ body {
 }
 
 .header-line {
-  width: 40px;
+  display: block;
+  width: 60px;
   height: 3px;
   background: #9C0001;
-  margin: 10px auto 40px;
+  margin: 10px auto 60px;
 }
 
 .latest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.row-one,
+.row-two,
+.row-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .img-box {
-  height: 220px;
   border-radius: 16px;
   overflow: hidden;
   background: #f3f3f3;
@@ -152,14 +160,29 @@ body {
   display: block;
 }
 
+.img-box.small {
+  width: 350px;
+  height: 430px;
+}
+
+.img-box.normal {
+  width: 415px;
+  height: 430px;
+}
+
+.img-box.wide {
+  width: 545px;
+  height: 430px;
+}
+
 .view-all-btn {
-  margin-top: 40px;
+  margin-top: 90px;
   background: #9C0001;
   color: #fff;
   border: none;
   padding: 10px 26px;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -326,4 +349,78 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .gallery-banner {
+    height: 260px;
+  }
+
+  .gallery-content h1 {
+    font-size: 22px;
+  }
+
+  .gallery-content p {
+    font-size: 12px;
+    line-height: 1.5;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .row-one,
+  .row-two,
+  .row-three {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .img-box,
+  .img-box.small,
+  .img-box.normal,
+  .img-box.wide {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .img-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
 }
