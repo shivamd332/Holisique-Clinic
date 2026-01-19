@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holisique Clinic</title>
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
@@ -18,9 +18,9 @@
         <li><a href="../home.html">Home</a></li>
         <li><a href="../About/about.html">About Us</a></li>
         <li><a href="../Treatment/treatment.html">Treatments</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="../Gallery/gallery.html" >Gallery</a></li>
         <li><a href="../Blogs/blog.html" >Blogs</a></li>
-        <li><a href="../Contact/contact.html">Contact Us</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
     </ul>
 
     <button class="register-btn">
@@ -34,11 +34,11 @@
 </nav>
 
 <!-- Banner -->
-<section class="gallery-banner">
-    <div class="gallery-overlay"></div>
+<section class="contact-banner">
+    <div class="contact-overlay"></div>
 
-    <div class="gallery-content">
-        <h1>Our Gallery</h1>
+    <div class="contact-content">
+        <h1>Contact Us</h1>
 
         <p>
             “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare non sed est cursus. Vel hac convallis ipsum, facilisi odio pellentesque bibenolor sit amet, consectetur adipiscing elit. Ornare non sed est cursus. Vel hac convallis ipsum, facilisi odio pellentesque bibendum viverra tempus.”
@@ -46,41 +46,100 @@
     </div>
 </section>
 
-<!-- Latest Images -->
-<section class="latest-images-section">
+<!-- Main content -->
+ <section class="contact-form-section">
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="Images/doctor.png" alt="Doctor">
+        </div>
 
-    <div class="latest-header">
-        <h2>Our Latest Images</h2>
-        <span class="header-line"></span>
+        <div class="contact-form">
+
+            <h2>Contact Us</h2>
+            <span class="title-line"></span>
+
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter Your Email Address">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Enter Your Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="3"></textarea>
+                </div>
+
+                <button class="submit-btn">
+                    Submit <span>↗</span>
+                </button>
+            </form>
+        </div>
     </div>
-
-    <div class="latest-grid">
-
-    <div class="row-one">
-        <div class="img-box small"><img src="Images/our-1.png"></div>
-        <div class="img-box wide"><img src="Images/our-2.png"></div>
-        <div class="img-box small"><img src="Images/our-3.png"></div>
-    </div>
-
-    <div class="row-two">
-        <div class="img-box normal"><img src="Images/our-4.png"></div>
-        <div class="img-box normal"><img src="Images/our-5.png"></div>
-        <div class="img-box normal"><img src="Images/our-6.png"></div>
-    </div>
-
-    <div class="row-three">
-        <div class="img-box small"><img src="Images/our-7.png"></div>
-        <div class="img-box wide"><img src="Images/our-8.png"></div>
-        <div class="img-box small"><img src="Images/our-9.png"></div>
-    </div>
-
-</div>
-
-    <button class="view-all-btn">
-        View All <span>→</span>
-    </button>
-
 </section>
+
+<!-- Info -->
+<section class="contact-info-section">
+
+    <div class="contact-info-grid">
+
+        <div class="info-card">
+            <div class="info-header">
+                <span class="icon">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"/>
+</svg>
+
+                </span>
+                <h4>Call Us</h4>
+            </div>
+            <p>
+                + 9152654784<br>
+                + 8652654784
+            </p>
+        </div>
+
+        <div class="info-card">
+            <div class="info-header">
+                <span class="icon">📍</span>
+                <h4>Location</h4>
+            </div>
+            <p>
+                121 Rock Street, 21 Avenue,<br>
+                Mumbai, Maharastra<br>
+                92103-9000
+            </p>
+        </div>
+
+        <div class="info-card">
+            <div class="info-header">
+                <span class="icon">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+</svg>
+
+                </span>
+                <h4>Hours</h4>
+            </div>
+            <p>
+                Mon - Friday - 11:00<br>
+                am - 06:00 pm
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
 
 <!-- Footer -->
 <footer class="site-footer">
